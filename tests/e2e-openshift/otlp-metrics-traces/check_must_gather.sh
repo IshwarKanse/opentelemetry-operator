@@ -13,7 +13,7 @@ REQUIRED_ITEMS=(
   ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/olm/clusterserviceversion-opentelemetry-operator-*.yaml
   ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/olm/*opentelemetry-operator*.yaml
   ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/olm/installplan-install-*.yaml
-  ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/olm/subscription-opentelemetry-operator-v*-sub.yaml
+  ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/olm/subscription-opentelemetry-*.yaml
   ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/namespaces/chainsaw-otlp-metrics/cluster-collector/service-cluster-collector-collector-headless.yaml
   ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/namespaces/chainsaw-otlp-metrics/cluster-collector/deployment-cluster-collector-collector.yaml
   ghcr-io-open-telemetry-opentelemetry-operator-must-gather-sha256-*/namespaces/chainsaw-otlp-metrics/cluster-collector/service-cluster-collector-collector-monitoring.yaml
