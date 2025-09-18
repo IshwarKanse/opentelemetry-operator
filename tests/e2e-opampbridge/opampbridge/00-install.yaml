@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: e2e-test-app-bridge-server
-          image: ghcr.io/open-telemetry/opentelemetry-operator/e2e-test-app-bridge-server:ve2e
+          image: quay.io/rhn_support_ikanse/opamp-bridge-server:latest
           ports:
             - containerPort: 4320
             - containerPort: 4321
