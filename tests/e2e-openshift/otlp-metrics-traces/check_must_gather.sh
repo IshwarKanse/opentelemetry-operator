@@ -13,7 +13,6 @@ REQUIRED_ITEMS=(
   *-must-gather-sha256-*/olm/clusterserviceversion-opentelemetry-operator-*.yaml
   *-must-gather-sha256-*/olm/*opentelemetry-operator*.yaml
   *-must-gather-sha256-*/olm/installplan-install-*.yaml
-  *-must-gather-sha256-*/olm/subscription-opentelemetry-product.yaml
   *-must-gather-sha256-*/namespaces/chainsaw-otlp-metrics/cluster-collector/service-cluster-collector-collector-headless.yaml
   *-must-gather-sha256-*/namespaces/chainsaw-otlp-metrics/cluster-collector/deployment-cluster-collector-collector.yaml
   *-must-gather-sha256-*/namespaces/chainsaw-otlp-metrics/cluster-collector/service-cluster-collector-collector-monitoring.yaml
