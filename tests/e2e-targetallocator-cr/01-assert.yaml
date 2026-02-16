@@ -44,8 +44,7 @@ spec:
               path: /livez
               port: 8080
               scheme: HTTP
-            initialDelaySeconds: 15
-            periodSeconds: 20
+            periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
           name: ta-container
@@ -59,8 +58,7 @@ spec:
               path: /readyz
               port: 8080
               scheme: HTTP
-            initialDelaySeconds: 10
-            periodSeconds: 15
+            periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
           resources: {}
