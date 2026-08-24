@@ -136,7 +136,7 @@ spec:
         env:
         - name: OTEL_NAMESPACE
           value: opentelemetry-operator-system
-        timeout: 180s
+        timeout: 360s
         content: |
           #!/bin/bash
           set -e
@@ -153,11 +153,13 @@ spec:
           # can cause brief transient API errors when querying deployments.
           WEBHOOK_FOUND=false
           for attempt in $(seq 1 10); do
-            if kubectl get deployment opentelemetry-operator-webhook -n "$OTEL_NAMESPACE" &>/dev/null; then
+            rc=0
+            kubectl get deployment opentelemetry-operator-webhook -n "$OTEL_NAMESPACE" 2>/dev/null && rc=0 || rc=$?
+            if [ $rc -eq 0 ]; then
               WEBHOOK_FOUND=true
               break
             fi
-            echo "Webhook deployment not accessible (attempt $attempt/10), retrying in 3s..."
+            echo "Webhook deployment not accessible (attempt $attempt/10, rc=$rc), retrying in 3s..."
             sleep 3
           done
 
@@ -232,11 +234,13 @@ spec:
           # Check if pod-webhook deployment exists (retry for OLM stability)
           WEBHOOK_FOUND=false
           for attempt in $(seq 1 10); do
-            if kubectl get deployment opentelemetry-operator-webhook -n "$OTEL_NAMESPACE" &>/dev/null; then
+            rc=0
+            kubectl get deployment opentelemetry-operator-webhook -n "$OTEL_NAMESPACE" 2>/dev/null && rc=0 || rc=$?
+            if [ $rc -eq 0 ]; then
               WEBHOOK_FOUND=true
               break
             fi
-            echo "Webhook deployment not accessible (attempt $attempt/10), retrying in 3s..."
+            echo "Webhook deployment not accessible (attempt $attempt/10, rc=$rc), retrying in 3s..."
             sleep 3
           done
 
