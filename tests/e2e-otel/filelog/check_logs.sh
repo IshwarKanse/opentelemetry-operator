@@ -1,4 +1,3 @@
-
 #!/bin/sh
 # This script checks the OpenTelemetry collector pod for the presence of Logs.
 # It continuously checks until logs are found or the script is terminated by timeout.
