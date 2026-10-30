@@ -121,6 +121,8 @@ Default container images are version-tagged at build time. In OLM deployments, `
 | `openshift-create-dashboard` | `--openshift-create-dashboard` | `OPENSHIFT_CREATE_DASHBOARD` | `false` |
 | `fips-disabled-components` | `--fips-disabled-components` | `FIPS_DISABLED_COMPONENTS` | `uppercase` |
 
+`openshift-create-dashboard` publishes two console dashboards under **Observe > Dashboards**: *OpenTelemetry Collector* (health of the collector instances, ConfigMap `opentelemetry-collector`) and *OpenTelemetry GenAI* (GenAI workloads: requests, tokens, latency and errors from the OpenTelemetry GenAI semantic conventions, plus Llama Stack and vLLM engine metrics; ConfigMap `opentelemetry-genai`). Both ConfigMaps live in `openshift-config-managed` and are removed when the operator stops.
+
 ## Feature gates
 
 | YAML key | CLI flag | Environment variable |
